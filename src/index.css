@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  .transform-style-3d {
+    transform-style: preserve-3d;
+  }
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  .transform-rotateY-180 {
+    transform: rotateY(180deg);
+  }
+}
+
+@keyframes scanLaser {
+  0% {
+    top: 0%;
+  }
+  50% {
+    top: 95%;
+  }
+  100% {
+    top: 0%;
+  }
+}
+
+.animate-scan-laser {
+  animation: scanLaser 2.2s ease-in-out infinite;
+}
+
+@keyframes dashFlow {
+  0% {
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-dash-flow {
+  stroke-dasharray: 20 10;
+  animation: dashFlow 3s linear infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 4px rgba(59, 130, 246, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 16px rgba(56, 189, 248, 0.85));
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2.5s ease-in-out infinite;
+}
+
+@keyframes fingerprintScan {
+  0% {
+    opacity: 0.3;
+    transform: scale(0.92);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 0.3;
+    transform: scale(0.92);
+  }
+}
+
+.animate-fp-scan {
+  animation: fingerprintScan 2s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes logoBeam {
+  0% {
+    stroke-dashoffset: 400;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-logo-beam {
+  stroke-dasharray: 120 300;
+  animation: logoBeam 2.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes shimmerGlow {
+  0% { opacity: 0.4; transform: translateX(-100%); }
+  50% { opacity: 1; }
+  100% { opacity: 0.4; transform: translateX(100%); }
+}
+
+.animate-shimmer {
+  animation: shimmerGlow 2.5s ease-in-out infinite;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-8px); }
+  40%, 80% { transform: translateX(8px); }
+}
+
+.animate-shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes pulseSubtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.92; transform: scale(0.99); }
+}
+
+.animate-pulse-subtle {
+  animation: pulseSubtle 3s ease-in-out infinite;
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 12s linear infinite;
+}
+

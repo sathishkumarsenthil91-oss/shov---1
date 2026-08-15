@@ -1,0 +1,6 @@
+{
+  "name": "SHOV College Digital ID System",
+  "description": "Secure College Digital ID & Authentication System with QR verification, Role-based dashboards (Admin, Staff, Student), Fine payment portal, HOD & VP photo sharing, and dark mode.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
